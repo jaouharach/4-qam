@@ -30,7 +30,7 @@ data = [ random.choice([0, 1]) for i in range(360)]
 print(data)
 
 # generate the noise 
-mu, sigma = 0, (1/10000)**2 # mean and standard deviation
+mu, sigma = 0, math.sqrt(1/10 ** (3/10)) # mean and standard deviation
 nr = np.random.normal(mu, sigma,  int(len(data)/2))
 ni = np.random.normal(mu, sigma,  int(len(data)/2))
 noise = [complex(nr[i],ni[i]) for i in range(int(len(data)/2))]
